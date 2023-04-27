@@ -1,0 +1,12 @@
+.txt-white {
+  color: white;
+}
+
+.titulo-principal {
+  display: flex;
+  justify-content: center;
+  margin: 30px 325px 0 325px;
+  padding: 10px 0;
+  background-color: black;
+  border-radius: 16px;
+}
