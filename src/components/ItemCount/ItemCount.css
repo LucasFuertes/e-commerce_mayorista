@@ -1,0 +1,24 @@
+.contador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.boton {
+  font-size: large;
+  border: none;
+  background-color: blue;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.numero {
+  margin: 0 10px;
+}
