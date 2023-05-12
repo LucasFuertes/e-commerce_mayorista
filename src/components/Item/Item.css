@@ -1,0 +1,23 @@
+.card-item {
+  padding: 30px;
+  margin: 40px;
+  border-radius: 16px;
+  background-color: rgb(31, 70, 161);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-item {
+  width: 250px;
+  height: 250px;
+}
+
+.boton-detalle {
+  font-size: large;
+  border: none;
+  background-color: rgb(232, 194, 68);
+  padding: 15px;
+  border-radius: 12px;
+}

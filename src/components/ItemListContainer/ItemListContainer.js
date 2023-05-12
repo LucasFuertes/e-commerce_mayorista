@@ -1,9 +1,25 @@
+import { useEffect, useState } from "react";
 import "../../styles.css";
+import verGalletas from "../../asyncMock";
+import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = ({ greeting }) => {
+  const [galletas, setGalletas] = useState([]);
+
+  useEffect(() => {
+    verGalletas()
+      .then((response) => {
+        setGalletas(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
-    <div className="titulo-principal txt-white">
-      <h1>{greeting}</h1>
+    <div>
+      <h1 className="titulo-principal txt-white">{greeting}</h1>
+      <ItemList gallets={galletas} />
     </div>
   );
 };

@@ -4,7 +4,7 @@ const galletas = [
     nombre: 'Bizcochos salados "Don Satur"',
     precioUnid: 200,
     precioMay: 1500,
-    img: "https://golmarymar.com.ar/wp-content/uploads/Caja-Bizcocho-Don-Satur-Grasa.jpg",
+    img: "https://www.deliargentina.com/image/cache/catalog/product/alimentacion/bizcochitos-salados-de-grasa-don-satur-argentinos/bizcochitos-salados-de-grasa-don-satur-argentinos-1000x1000.png",
     stock: 60,
     descripcion: "Descripcion de bizcochos salados",
   },
@@ -28,7 +28,7 @@ const galletas = [
   },
 ];
 
-const obtenerGalletas = () => {
+const verGalletas = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(galletas);
@@ -36,4 +36,4 @@ const obtenerGalletas = () => {
   });
 };
 
-export default obtenerGalletas;
+export default verGalletas;
