@@ -10,16 +10,16 @@ const ItemDetail = ({id, nombre, precioUnid, precioMay, img, stock, descripcion}
                 </h2>
             </div>
             <div>
-                <img src={img} alt={nombre}/>
+                <img src={img} alt={nombre} className="img-detalle"/>
             </div>
             <div>
-                <p>
+                <p className="info">
                     Descripcion: {descripcion}
                 </p>
-                <p>
+                <p className="info">
                     Precio por unidad: ${precioUnid}
                 </p>
-                <p>
+                <p className="info">
                     Precio por mayor: ${precioMay} x 10 unid.
                 </p>
             </div>

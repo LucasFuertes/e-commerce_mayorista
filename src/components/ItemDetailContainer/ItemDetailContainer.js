@@ -1,3 +1,4 @@
+import "./ItemDetailContainer.css"
 import { useEffect, useState } from "react";
 import { verGalletaId } from "../../asyncMock";
 import ItemDetail from "../ItemDetail/ItemDetail";
