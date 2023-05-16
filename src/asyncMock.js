@@ -32,8 +32,16 @@ const verGalletas = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(galletas);
-    }, 1000);
+    }, 2000);
   });
 };
 
 export default verGalletas;
+
+export const verGalletaId = (galletaId) => {
+  return new Promise ((resolve) => {
+    setTimeout (() => {
+      resolve(galletas.find(cookie => cookie.id === galletaId));
+    }, 2000);
+  });
+};
