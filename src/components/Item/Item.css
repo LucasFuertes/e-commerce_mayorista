@@ -15,7 +15,9 @@
 }
 
 .boton-detalle {
+  text-decoration: none;
   font-size: large;
+  color: black;
   border: none;
   background-color: rgb(232, 194, 68);
   padding: 15px;

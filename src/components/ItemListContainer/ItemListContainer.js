@@ -1,25 +1,31 @@
 import { useEffect, useState } from "react";
 import "../../styles.css";
-import verGalletas from "../../asyncMock";
+import { verProductos, verProductoCategoria } from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({ greeting }) => {
-  const [galletas, setGalletas] = useState([]);
+  const [productos, setProductos] = useState([]);
+
+  const {categoriaId} = useParams();
 
   useEffect(() => {
-    verGalletas()
+
+    const asyncFunc = categoriaId ? verProductoCategoria : verProductos
+
+    asyncFunc(categoriaId)
       .then((response) => {
-        setGalletas(response);
+        setProductos(response);
       })
       .catch((error) => {
         console.error(error);
       });
-  }, []);
+  }, [categoriaId]);
 
   return (
     <div>
       <h1 className="titulo-principal txt-white">{greeting}</h1>
-      <ItemList gallets={galletas} />
+      <ItemList products={productos} />
     </div>
   );
 };

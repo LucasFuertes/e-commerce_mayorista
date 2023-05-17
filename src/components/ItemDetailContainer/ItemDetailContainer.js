@@ -1,24 +1,27 @@
 import "./ItemDetailContainer.css"
 import { useEffect, useState } from "react";
-import { verGalletaId } from "../../asyncMock";
+import { verProductoId } from "../../asyncMock";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-    const [galleta, setGalleta] = useState(null);
+    const [producto, setProducto] = useState(null);
+
+    const { itemId } = useParams();
     
     useEffect(() => {
-        verGalletaId("1")
+        verProductoId(itemId)
         .then((response) => {
-            setGalleta(response);
+            setProducto(response);
         })
         .catch((error) => {
             console.error(error);
         });
-    }, []);
+    }, [itemId]);
 
     return(
         <div className="detalles">
-            <ItemDetail {...galleta}/>
+            <ItemDetail {...producto}/>
         </div>
     )
 }

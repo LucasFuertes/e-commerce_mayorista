@@ -1,7 +1,7 @@
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 
-const ItemDetail = ({id, nombre, precioUnid, precioMay, img, stock, descripcion}) => {
+const ItemDetail = ({id, nombre, categoria, precioUnid, precioMay, img, stock, descripcion}) => {
     return(
         <div>
             <div>
@@ -13,6 +13,9 @@ const ItemDetail = ({id, nombre, precioUnid, precioMay, img, stock, descripcion}
                 <img src={img} alt={nombre} className="img-detalle"/>
             </div>
             <div>
+                <p className="info">
+                    Categoria: {categoria}
+                </p>
                 <p className="info">
                     Descripcion: {descripcion}
                 </p>

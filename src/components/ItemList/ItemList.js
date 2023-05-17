@@ -1,11 +1,11 @@
 import Item from "../Item/Item";
 import "./ItemList.css";
 
-const ItemList = ({ gallets }) => {
+const ItemList = ({ products }) => {
   return (
     <div className="lista">
-      {gallets.map((cookies) => (
-        <Item key={cookies.id} {...cookies} />
+      {products.map((prod) => (
+        <Item key={prod.id} {...prod} />
       ))}
     </div>
   );
