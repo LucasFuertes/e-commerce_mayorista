@@ -15,7 +15,10 @@ const Item = ({ id, nombre, img, precioUnid, stock }) => {
         <p>Stock del producto: {stock} unidades</p>
       </div>
       <div>
-        <Link to={`/item/${id}`} className="boton-detalle"> Ver detalle </Link>
+        <Link to={`/item/${id}`} className="boton-detalle">
+          {" "}
+          Ver detalle{" "}
+        </Link>
       </div>
     </div>
   );
