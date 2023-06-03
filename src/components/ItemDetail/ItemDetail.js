@@ -1,5 +1,8 @@
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext/CartContext";
 
 const ItemDetail = ({
   id,
@@ -11,6 +14,18 @@ const ItemDetail = ({
   stock,
   descripcion,
 }) => {
+  const [agregarCant, setAgregarCant] = useState(0);
+
+  const { addItem } = useContext(CartContext);
+
+  const confirmarCant = (cantidad) => {
+    setAgregarCant(cantidad);
+
+    const item = { id, nombre, precioUnid };
+
+    addItem(item, cantidad);
+  };
+
   return (
     <div className="position">
       <div>
@@ -26,13 +41,17 @@ const ItemDetail = ({
         <p className="info">Precio por mayor: ${precioMay} x 10 unid.</p>
       </div>
       <div>
-        <ItemCount
-          existencias={stock}
-          cantInicial={1}
-          agregar={(cantidad) =>
-            console.log(`Cantidad de artículos seleccionados: ${cantidad}`)
-          }
-        />
+        {agregarCant > 0 ? (
+          <Link to="/cart">
+            <button className="boton">Terminar compra</button>
+          </Link>
+        ) : (
+          <ItemCount
+            existencias={stock}
+            cantInicial={1}
+            agregar={confirmarCant}
+          />
+        )}
       </div>
     </div>
   );
