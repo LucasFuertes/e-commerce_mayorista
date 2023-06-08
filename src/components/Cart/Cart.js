@@ -6,10 +6,10 @@ import { CartContext } from "../../contexts/CartContext/CartContext";
 
 export const Cart = () => {
   const { cart, clearCart, cantidadTotal, total } = useContext(CartContext);
-  console.log(cantidadTotal);
+  console.log(cantidadTotal());
   console.log(`Datos del carrito ${cart}`);
 
-  if (cantidadTotal() === 0) {
+  if (cantidadTotal === 0) {
     return (
       <div>
         <h1>No hay productos en el carrito</h1>

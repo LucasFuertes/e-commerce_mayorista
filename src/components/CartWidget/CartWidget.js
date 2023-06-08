@@ -14,7 +14,7 @@ const CartWidget = () => {
       style={{ display: cantidadTotal() > 0 ? "block" : "none" }}
     >
       <img src={cart} alt="cart-widget" />
-      <p>{cantidadTotal}</p>
+      <p>{cantidadTotal()}</p>
     </Link>
   );
 };
