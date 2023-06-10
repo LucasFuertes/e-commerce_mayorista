@@ -6,13 +6,12 @@ import { CartContext } from "../../contexts/CartContext/CartContext";
 
 const ItemDetail = ({
   id,
-  nombre,
-  categoria,
-  precioUnid,
-  precioMay,
-  img,
+  title,
+  categoryId,
+  price,
+  image,
   stock,
-  descripcion,
+  description,
 }) => {
   const [agregarCant, setAgregarCant] = useState(0);
 
@@ -21,7 +20,7 @@ const ItemDetail = ({
   const confirmarCant = (cantidad) => {
     setAgregarCant(cantidad);
 
-    const item = { id, nombre, precioUnid };
+    const item = { id, title, price };
 
     addItem(item, cantidad);
   };
@@ -29,16 +28,15 @@ const ItemDetail = ({
   return (
     <div className="position">
       <div>
-        <h2>{nombre}</h2>
+        <h2>{title}</h2>
       </div>
       <div>
-        <img src={img} alt={nombre} className="img-detalle" />
+        <img src={image} alt={title} className="img-detalle" />
       </div>
       <div>
-        <p className="info">Categoria: {categoria}</p>
-        <p className="info">Descripcion: {descripcion}</p>
-        <p className="info">Precio por unidad: ${precioUnid}</p>
-        <p className="info">Precio por mayor: ${precioMay} x 10 unid.</p>
+        <p className="info">Categoria: {categoryId}</p>
+        <p className="info">Descripcion: {description}</p>
+        <p className="info">Precio por unidad: ${price}</p>
       </div>
       <div>
         {agregarCant > 0 ? (

@@ -36,7 +36,7 @@ export const CartProvider = ({children}) => {
   }
 
   const total = () => {
-    const precioTotal = cart.reduce((acumulador, item) => acumulador + item.precioUnid * item.cantidad, 0);
+    const precioTotal = cart.reduce((acumulador, item) => acumulador + item.price * item.cantidad, 0);
     return precioTotal;
   }
 
