@@ -1,4 +1,21 @@
+.eliminar {
+  font-size: large;
+  border: none;
+  background-color: rgb(201, 70, 70);
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 12px;
+}
+
 .cart {
   background-color: blanchedalmond;
   color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  border: 2px solid gray;
 }

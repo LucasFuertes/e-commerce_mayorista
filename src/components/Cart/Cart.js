@@ -11,10 +11,10 @@ export const Cart = () => {
 
   if (cantidadTotal() === 0) {
     return (
-      <div>
+      <div className="text-center">
         <h1>No hay productos en el carrito</h1>
         <Link to="/" className="boton">
-          Productos
+          <button className="productos-inicio">Productos</button>
         </Link>
       </div>
     );
@@ -24,13 +24,15 @@ export const Cart = () => {
       {cart.map((product) => (
         <CartItem key={product.id} {...product} />
       ))}
-      <h3>Total: ${total()}</h3>
-      <button onClick={() => clearCart()} className="boton">
-        Limpiar el carrito
-      </button>
-      <Link to="/checkout" className="boton">
-        Checkout
-      </Link>
+      <h3 style={{ textAlign: "center" }}>Total: ${total()}</h3>
+      <div className="opciones">
+        <button onClick={() => clearCart()} className="botones">
+          Limpiar el carrito
+        </button>
+        <Link to="/checkout" className="botones">
+          <button className="checkout">Checkout</button>
+        </Link>
+      </div>
     </div>
   );
 };

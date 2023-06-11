@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5%;
+  font-size: x-large;
+}
+
+.input {
+  border: none;
+  border-bottom: 5px solid grey;
+}
+
+.boton-center {
+  text-align: center;
+}
+
+.boton-orden {
+  font-size: large;
+  border: none;
+  background-color: rgb(70, 109, 201);
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 12px;
+}

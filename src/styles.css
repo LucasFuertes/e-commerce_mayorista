@@ -8,3 +8,15 @@
   padding: 10px 0;
   background-color: rgb(154, 33, 33);
 }
+
+.cart-widget {
+  background-color: grey;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.cart-button {
+  border: none;
+  background-color: grey;
+  color: white;
+}

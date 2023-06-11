@@ -1,0 +1,30 @@
+.opciones {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.productos-inicio {
+  margin-top: 20px;
+  border: none;
+  background-color: rgb(70, 109, 201);
+  color: white;
+}
+
+.checkout{
+  border: none;
+  background-color: rgb(70, 109, 201);
+  color: white;
+}
+
+.botones {
+  font-size: x-large;
+  border: none;
+  background-color: rgb(70, 109, 201);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px;
+  margin: 10px 30px;
+  width: 100%;
+  border-radius: 16px;
+}
