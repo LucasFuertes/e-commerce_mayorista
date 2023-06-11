@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Proyecto e-commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto consiste en crear un simple negocio online de una tienda, el cuál posee un sencillo procedimiento de pasos desde la entrada a la página web hasta la adquisición del id de la orden generada. Usando el navbar, se puede filtrar los productos por su categoría, así logrando buscar un tipo de articulo en específico. Una vez que se elige la cantidad de artículos, el carrito almacena la cantidad solicitada y hace una suma del total de todos los artículos, dando la opción de eliminar productos del carrito individualmente, o borrar todo con un simple botón. En caso de elegir la opción "Checkout", se deberá llenar todos los espacios del formulario con los datos solicitados. Y una vez colocados los datos, el cliente debe crear la orden para recibir un id de su orden generada.
+Aunque este proyecto fue difícil de comprender, fui armándome de paciencia para aprender sobre todo lo que estaba pasando en cada línea de código que iba haciendo poco a poco. Por supuesto, los estilos no se quedan atrás, pero usé un diseño simple para no darle demasiado tiempo, e invertirlo en el código principal.
 
-## Available Scripts
+Nota: Este proyecto a sido estructurado con [Create React App](https://github.com/facebook/create-react-app).
 
-In the project directory, you can run:
+## Versión de Node
+
+Para evitar problemas con las funciones y métodos implementados en el proyecto, es necesario que use la versión de Node 18.16.0
+
+### `npm install`
+
+En caso de que algunos archivos esenciales falten, como por ejemplo "node_modules" o "package-lock.json", debe dirigirse al directorio de la carpeta raiz y escribir en su consola de comandos lo siguiente:  
+
+```bash
+npm install
+```
+
+De esta forma, mientras el archivo "package.json exista, todas las dependencias especificadas en el archivo antes mencionado, se instalarán nuevamente en el proyecto, recuperándose así archivos como "node_modules" y "package-lock.json"
+
+## Comandos complementarios utilizados
+
+Aparte del comando "create-react-app", también se han usado otros distintos comandos para implementar librerías y dependencias
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Este comando ejecuta el proyecto dentro de un "localhost"(ser)en su navegador web 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `npm install react-router-dom`
 
-### `npm test`
+Con este comando, se puede instalar una librería bastante útil para el uso de rutas dentro de un proyecto de react
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm install firebase`
 
-### `npm run build`
+Este comando sirve para instalar las dependencias que se requieren para vincular el proyecto con la base de datos de Firebase
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm install react-bootstrap bootstrap`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Como necesitaba algunos diseños de bootstrap para mi proyecto hecho en react, opté por usar la librería "React-bootstrap", que trae estructuras como el Navbar en formato de componentes React
