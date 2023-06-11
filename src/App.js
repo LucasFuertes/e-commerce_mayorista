@@ -13,10 +13,7 @@ function App() {
         <CartProvider>
           <NavBar />
           <Routes>
-            <Route
-              path="/"
-              element={<ItemListContainer greeting={"¡Bienvenidos!"} />}
-            />
+            <Route path="/" element={<ItemListContainer greeting={true} />} />
             <Route
               path="categoria/:categoriaId"
               element={<ItemListContainer />}

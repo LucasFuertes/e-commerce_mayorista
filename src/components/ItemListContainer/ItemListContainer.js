@@ -39,7 +39,9 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <div>
-      <h1 className="titulo-principal txt-white">{greeting}</h1>
+      <h1 className="titulo-principal txt-white">
+        {greeting ? "Todos los productos" : categoriaId}
+      </h1>
       <ItemList products={productos} />
     </div>
   );
